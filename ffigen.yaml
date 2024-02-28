@@ -1,0 +1,24 @@
+name: PcgC
+description: PCG Bindings
+output: lib/src/pcgc.dart
+
+headers:
+  entry-points:
+    - /usr/local/include/pcg_variants.h
+
+comments:
+  style: any
+  length: full
+
+functions:
+  include:
+    - pcg_.*
+
+# enums:
+#   include:
+#     - FDB.*
+
+exclude-all-by-default: true
+
+compiler-opts:
+  - -D PCG_USE_INLINE_ASM
